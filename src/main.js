@@ -7,6 +7,7 @@ import "izitoast/dist/css/iziToast.min.css";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
+const book = new SimpleLightbox('.list_gallery a');
 
 const form = document.querySelector('.main_form');
 const myGallery = document.querySelector('.list_gallery');
