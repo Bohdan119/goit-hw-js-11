@@ -10,7 +10,7 @@ const API_KEY = '43249627-6464a1b02c37cf8fbedd51288';
 
     const params = new URLSearchParams({
         key: API_KEY,
-        q: "dog+cat+tiger+lion",
+        q: "animals",
         image_type: "photo",
         orientation: "horizontal",
         safesearch: true,
