@@ -25,6 +25,8 @@ function handlerForm(event) {
     event.preventDefault();
     myGallery.innerHTML = '';
     let searchWord = event.currentTarget.elements.inputElement.value;
+    console.log(event.currentTarget.elements.inputElement.value);
+
 
 searchImages(searchWord)
     .then(data => {
@@ -43,7 +45,8 @@ searchImages(searchWord)
     } else {
         myGallery.insertAdjacentHTML('beforeend', renderGallery(data));
         book.refresh();
-        event.currentTarget.elements.inputElement.value = '';        
+        event.currentTarget.elements.inputElement.value = "";  
+        console.log(event.currentTarget.elements.inputElement.value);
     }
     })
     .catch(error => {
