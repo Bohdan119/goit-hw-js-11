@@ -4,8 +4,8 @@ import { renderGallery } from './js/render-functions.js';
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+// import SimpleLightbox from "simplelightbox";
+// import "simplelightbox/dist/simple-lightbox.min.css";
 
 
 const form = document.querySelector('.main_form');
@@ -23,7 +23,7 @@ form.addEventListener("submit", handlerForm);
 async function handlerForm(event) {
     event.preventDefault();
     myGallery.innerHTML = '';
-    const searchWord = event.currentTarget.elements.inputElement.value;
+    let searchWord = event.currentTarget.elements.inputElement.value;
 
 searchImages(searchWord)
     .then(data => {
@@ -42,8 +42,7 @@ searchImages(searchWord)
     } else {
         myGallery.insertAdjacentHTML('beforeend', renderGallery(data));
         book.refresh();
-        event.currentTarget.elements.inputElement.value = '';
-        
+        event.currentTarget.elements.inputElement.value = '';        
     }
     })
     .catch(error => {
