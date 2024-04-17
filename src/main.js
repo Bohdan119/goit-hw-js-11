@@ -71,9 +71,9 @@ function handlerForm(event) {
                 timeout: '5000',
             });
         })
-        // .finally(() => { 
-        //     hideLoader();
-        // });
+        .finally(() => { 
+            loadEl.classList.remove('loading')
+        });
 }
 
 
