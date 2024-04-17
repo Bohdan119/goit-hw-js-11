@@ -20,18 +20,20 @@ const loadEl = document.querySelector('.loader');
 //     loadEl.style.display = 'none';
 // };
 
-window.addEventListener('load', hendlerLoad);
-function hendlerLoad() {
-    setTimeout(() => {
-        loadEl.remove();
-    },600)
-}
+// window.addEventListener('load', hendlerLoad);
+// function hendlerLoad() {
+//     console.dir(loadEl);
+//     setTimeout(() => {
+//         loadEl.remove();
+//     },300)
+// }
 
 
 form.addEventListener("submit", handlerForm);
 
 function handlerForm(event) {
     event.preventDefault();
+    loadEl.classList.add('loading');
     myGallery.innerHTML = '';
     let searchWord = event.currentTarget.elements.inputElement.value;
     // console.log(event.currentTarget.elements.inputElement.value);
