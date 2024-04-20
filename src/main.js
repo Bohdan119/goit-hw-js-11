@@ -20,15 +20,13 @@ const hideLoader = () => {
     loadEl.style.display = 'none';
 };
 
-// window.addEventListener('load', () => {
-    
-// });
-// function hendlerLoad() {
-//     console.dir(loadEl);
-//     setTimeout(() => {
-//         loadEl.remove();
-//     },300)
-// }
+window.addEventListener('load', hendlerLoad );
+function hendlerLoad() {
+    console.dir(loadEl);
+    setTimeout(() => {
+        loadEl.remove();
+    },300)
+}
 
 
 form.addEventListener("submit", handlerForm);
