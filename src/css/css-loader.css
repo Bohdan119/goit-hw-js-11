@@ -6,9 +6,6 @@
     height: 48px;
     color: #195adc;
 }
-.loader.loading {
-    display: block;
-}
 
 .loader:before,
 .loader:after {

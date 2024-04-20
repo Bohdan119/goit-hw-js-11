@@ -13,7 +13,7 @@ return neccesaryArray
         downloads,
     }) => `
         <li class="card">
-            <div>
+            <div class="imeges">
                 <a href="${largeImageURL}">
                     <img src="${webformatURL}" alt="${tags}" class="picture"/>
                 </a>

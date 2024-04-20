@@ -13,14 +13,16 @@ const form = document.querySelector('.main_form');
 const myGallery = document.querySelector('.list_gallery');
 
 const loadEl = document.querySelector('.loader');
-// const showLOader = () => {
-//     loadEl.style.display = 'block';
-// };
-// const hideLoader = () => {
-//     loadEl.style.display = 'none';
-// };
+const showLoader = () => {
+    loadEl.style.display = 'block';
+};
+const hideLoader = () => {
+    loadEl.style.display = 'none';
+};
 
-// window.addEventListener('load', hendlerLoad);
+// window.addEventListener('load', () => {
+    
+// });
 // function hendlerLoad() {
 //     console.dir(loadEl);
 //     setTimeout(() => {
@@ -33,7 +35,7 @@ form.addEventListener("submit", handlerForm);
 
 function handlerForm(event) {
     event.preventDefault();
-    loadEl.classList.add('loading');
+    
     myGallery.innerHTML = '';
     let searchWord = event.currentTarget.elements.inputElement.value;
     // console.log(event.currentTarget.elements.inputElement.value);
@@ -56,6 +58,7 @@ function handlerForm(event) {
                 });
                 return 0;
             } else {
+                showLoader();
                 myGallery.insertAdjacentHTML('beforeend', renderGallery(data));
                 book.refresh();
             }
@@ -72,7 +75,7 @@ function handlerForm(event) {
             });
         })
         .finally(() => { 
-            loadEl.classList.remove('loading')
+            hideLoader();
         });
 }
 
