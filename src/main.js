@@ -19,6 +19,7 @@ const showLoader = () => {
 const hideLoader = () => {
     loadEl.style.display = 'none';
 };
+// ювбаь
 
 window.addEventListener('load', hendlerLoad );
 function hendlerLoad() {
